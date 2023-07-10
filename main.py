@@ -5,10 +5,7 @@ from discord.ext import commands
 from discord.utils import get
 
 
-intents = discord.Intents.default()
-intents.members = True
-bot = commands.Bot(command_prefix='.', intents=intents)
-
+bot = commands.Bot(command_prefix='.', intents=discord.Intents.all())
 bot.remove_command("help")
 
 TOKEN = ''
